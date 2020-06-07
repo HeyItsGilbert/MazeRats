@@ -1,6 +1,6 @@
 # MazeRats
 
-Create PC's, NPC's, and monsters in PowerShell!
+A MazeRats generator in powershell!
 
 ## Overview
 
