@@ -1,4 +1,5 @@
-site_name: https://heyitsgilbert.github.io/MazeRats/
+site_name: "Maze Rats PowerShell Module"
+site_url: https://heyitsgilbert.github.io/MazeRats/
 repo_url: https://github.com/HeyItsGilbert/MazeRats
 theme: readthedocs
 
