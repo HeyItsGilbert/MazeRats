@@ -7,3 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.1.0] Unreleased
 
+* Initial classes and functions to get started.
+  * Invoke-Spell
+  * New-DiceRoll
+  * New-MazeMonster
+  * New-MazeRat
+  * New-RatName

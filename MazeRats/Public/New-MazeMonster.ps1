@@ -1,14 +1,4 @@
 function New-MazeMonster {
-    <#
-    .SYNOPSIS
-        Creates a new monster for your encounters.
-    .DESCRIPTION
-        Randomly generates a monsters.
-    .EXAMPLE
-        PS> New-MazeMonster
-
-        Returns a MazeMonster
-    #>
     param(
         [Parameter(Mandatory=$true)]
         [Health]$Health,
@@ -38,6 +28,6 @@ function New-MazeMonster {
     if ($Feature) { $base.Feature = $Feature } else { $base.GetFeature()}
     if ($Trait) { $base.Trait = $Trait } else { $base.GetTrait()}
     if ($Ability) { $base.Ability = $Ability } else { $base.GetAbility()}
-    return $base
 
+    return $base
 }

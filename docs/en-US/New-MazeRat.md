@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-MazeRat
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Creates a new character.
 
 ## SYNTAX
 
@@ -17,21 +17,39 @@ New-MazeRat [[-Name] <Object>] [[-Gender] <Gender>] [[-Class] <SocialClass>] [<C
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Generate a new character quickly with minimal options.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> New-MazeRat
+Name           : Hester Bettleman
+Level          : 1
+XP             : 0
+Strength       : 1
+Dexterity      : 2
+Will           : 0
+Attack         : 0
+Armor          : 0
+Health         : 4
+MaxHealth      : 4
+SpellSlots     : 0
+Appearance     : Boney
+PhysicalDetail : Bronze skinned
+Background     : Galley slave
+Clothing       : Undersized
+Personality    : Stubborn
+Mannerism      : Monotone
+Spells         : {Shielding Blast}
 ```
 
-{{ Add example description here }}
+Generating a Random character with no parameters.
 
 ## PARAMETERS
 
 ### -Class
-{{ Fill Class Description }}
+The social class this character belongs to.
 
 ```yaml
 Type: SocialClass
@@ -47,7 +65,8 @@ Accept wildcard characters: False
 ```
 
 ### -Gender
-{{ Fill Gender Description }}
+Using the default tables, this currently accepts Male or Female but in future
+versions this will expand.
 
 ```yaml
 Type: Gender
@@ -63,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{ Fill Name Description }}
+Their name. You can generate one via `New-RatName` if you'd like.
 
 ```yaml
 Type: Object

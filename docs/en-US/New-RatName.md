@@ -22,28 +22,14 @@ Creates a new name based on the original table in MazeRats.
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+PS C:\> New-RatName
+Trillby Crumpling
 ```
-New-RatName
-Explanation of what the example does
-```
+
+Creates a random name to be used by PC or NPC.
 
 ## PARAMETERS
-
-### -Gender
-Gender
-
-```yaml
-Type: Gender
-Parameter Sets: (All)
-Aliases:
-Accepted values: Male, Female
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Class
 Social Rank
@@ -55,7 +41,23 @@ Aliases:
 Accepted values: UpperClass, LowerClass
 
 Required: False
-Position: 2
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Gender
+Gender
+
+```yaml
+Type: Gender
+Parameter Sets: (All)
+Aliases:
+Accepted values: Male, Female
+
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

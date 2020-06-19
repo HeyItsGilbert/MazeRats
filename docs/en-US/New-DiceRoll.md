@@ -25,8 +25,9 @@ Returns a random number
 ### EXAMPLE 1
 ```
 New-DiceRoll
-Returns an int which can be used within scripts, or by PC's or GM's.
 ```
+
+Returns an int which can be used within scripts, or by PC's or GM's.
 
 ## PARAMETERS
 

@@ -8,6 +8,7 @@ schema: 2.0.0
 # New-MazeMonster
 
 ## SYNOPSIS
+
 Creates a new monster for your encounters.
 
 ## SYNTAX
@@ -24,6 +25,7 @@ Randomly generates a monsters.
 ## EXAMPLES
 
 ### EXAMPLE 1
+
 ```
 New-MazeMonster
 ```
@@ -32,24 +34,23 @@ Returns a MazeMonster
 
 ## PARAMETERS
 
-### -Health
-{{ Fill Health Description }}
+### -Ability
+{{ Fill Ability Description }}
 
 ```yaml
-Type: Health
+Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Weak, Typical, Tough, Hulking, Colossal
 
-Required: True
-Position: 1
+Required: False
+Position: 9
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Armor
-{{ Fill Armor Description }}
+How heavily protected is your character?
 
 ```yaml
 Type: Armor
@@ -58,14 +59,14 @@ Aliases:
 Accepted values: Unarmored, LightProtection, ModerateProtection, HeavyProtection, NighImpervious
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -AttackBonus
-{{ Fill AttackBonus Description }}
+How skilled is this character?
 
 ```yaml
 Type: AttackBonus
@@ -74,30 +75,14 @@ Aliases:
 Accepted values: Untrained, Trained, Dangerous, Masterful, Lethal
 
 Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Strength
-{{ Fill Strength Description }}
-
-```yaml
-Type: StrBonus
-Parameter Sets: (All)
-Aliases:
-Accepted values: Weak, Average, Strong, Powerful, Monstrous
-
-Required: True
-Position: 4
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Dexterity
-{{ Fill Dexterity Description }}
+How dexterous is this character?
 
 ```yaml
 Type: DexBonus
@@ -106,23 +91,38 @@ Aliases:
 Accepted values: Slow, Average, Nimble, Swift, Blurred
 
 Required: True
-Position: 5
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Will
-{{ Fill Will Description }}
+### -Feature
+{{ Fill Feature Description }}
 
 ```yaml
-Type: WilBonus
+Type: String
 Parameter Sets: (All)
 Aliases:
-Accepted values: Dimwitted, Average, Clever, Brilliant, Genius
+
+Required: False
+Position: 7
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Health
+The type of health we want from this Monster.
+
+```yaml
+Type: Health
+Parameter Sets: (All)
+Aliases:
+Accepted values: Weak, Typical, Tough, Hulking, Colossal
 
 Required: True
-Position: 6
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -138,22 +138,23 @@ Aliases:
 Accepted values: Aerial, Terrestrial, Aquatic
 
 Required: False
-Position: 7
+Position: 6
 Default value: ([Enum]::GetValues([MonsterBase]) | Get-Random)
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Feature
-{{ Fill Feature Description }}
+### -Strength
+{{ Fill Strength Description }}
 
 ```yaml
-Type: String
+Type: StrBonus
 Parameter Sets: (All)
 Aliases:
+Accepted values: Weak, Average, Strong, Powerful, Monstrous
 
-Required: False
-Position: 8
+Required: True
+Position: 3
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -168,22 +169,23 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 9
+Position: 8
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Ability
-{{ Fill Ability Description }}
+### -Will
+{{ Fill Will Description }}
 
 ```yaml
-Type: String
+Type: WilBonus
 Parameter Sets: (All)
 Aliases:
+Accepted values: Dimwitted, Average, Clever, Brilliant, Genius
 
-Required: False
-Position: 10
+Required: True
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

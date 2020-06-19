@@ -2,58 +2,31 @@
 
 ## about_MazeRats
 
-```
-ABOUT TOPIC NOTE:
-The first header of the about topic should be the topic name.
-The second header contains the lookup name used by the help system.
-
-IE:
-# Some Help Topic Name
-## SomeHelpTopicFileName
-
-This will be transformed into the text file
-as `about_SomeHelpTopicFileName`.
-Do not include file extensions.
-The second header should have no spaces.
-```
-
 # SHORT DESCRIPTION
-{{ Short Description Placeholder }}
-
-```
-ABOUT TOPIC NOTE:
-About topics can be no longer than 80 characters wide when rendered to text.
-Any topics greater than 80 characters will be automatically wrapped.
-The generated about topic will be encoded UTF-8.
-```
+A MazeRats PC and NPC generator in powershell!
 
 # LONG DESCRIPTION
-{{ Long Description Placeholder }}
+This is a PowerShell module created to make it easy to spin up Maze Rats
+characters.
 
-## Optional Subtopics
-{{ Optional Subtopic Placeholder }}
+The source for this comes from MazeRats game.
+Please support Ben by buying a copy of the game. While this module will make it
+easy to play digitally, you'll still want to have a copy of the rules.
+
+[Maze Rats](https://questingbeast.itch.io/maze-rats)
 
 # EXAMPLES
-{{ Code or descriptive examples of how to leverage the functions described. }}
-
-# NOTE
-{{ Note Placeholder - Additional information that a user needs to know.}}
+```powershell
+Install-Module MazeRats
+```
 
 # TROUBLESHOOTING NOTE
-{{ Troubleshooting Placeholder - Warns users of bugs}}
-
-{{ Explains behavior that is likely to change with fixes }}
-
-# SEE ALSO
-{{ See also placeholder }}
-
-{{ You can also list related articles, blogs, and video URLs. }}
+Please make sure you are using at least PS5 as ENUM's are heavily used.
 
 # KEYWORDS
-{{List alternate names or titles for this topic that readers might use.}}
 
-- {{ Keyword Placeholder }}
-- {{ Keyword Placeholder }}
-- {{ Keyword Placeholder }}
-- {{ Keyword Placeholder }}
+- MazeRats
+- Old School Revival
+- TTRPG
+- Tabletop Role-Playing
 

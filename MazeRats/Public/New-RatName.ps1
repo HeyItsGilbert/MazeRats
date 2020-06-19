@@ -1,20 +1,5 @@
 # ToDo: Drop Gender OR include alternatives.
 function New-RatName {
-    <#
-    .SYNOPSIS
-        Create a new character name.
-    .DESCRIPTION
-        Creates a new name based on the original table in MazeRats.
-    .EXAMPLE
-        PS C:\> New-RatName
-        Explanation of what the example does
-    .INPUTS
-        Inputs (if any)
-    .OUTPUTS
-        Output's a name.
-    .NOTES
-        General notes
-    #>
     param(
         # Gender
         [Gender]$Gender,

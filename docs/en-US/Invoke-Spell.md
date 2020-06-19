@@ -8,7 +8,7 @@ schema: 2.0.0
 # Invoke-Spell
 
 ## SYNOPSIS
-Short description
+Uses a player spell if they know it.
 
 ## SYNTAX
 
@@ -17,20 +17,32 @@ Invoke-Spell [[-Player] <MazeRat>] [[-Spell] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Long description
+This allows you to use a MazeRat players Spells. It will return text saying that
+they used their spell.
 
 ## EXAMPLES
 
 ### EXAMPLE 1
+```powershell
+> Invoke-Spell $p -Spell 'Shielding Blast'
+Hester Bettleman casts Shielding Blast!
 ```
-<example usage>
-Explanation of what the example does
+
+$p is Hester Bettleman and he used his Shielding Blast spell
+
+### EXAMPLE 2
 ```
+> Invoke-Spell $p -Spell 'Shielding Blast'
+Hester Bettleman doesn't know that spell...
+They do know:
+```
+
+Hester Bettleman ($p) tried using Shielding Blast spell but didn't know it.
 
 ## PARAMETERS
 
 ### -Player
-{{ Fill Player Description }}
+This should be a player object created by New-MazeRat
 
 ```yaml
 Type: MazeRat
@@ -38,14 +50,16 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Spell
-{{ Fill Spell Description }}
+This should be a spell that is listed in the Players spell array.
+
+You can check by checking $player.Spells
 
 ```yaml
 Type: String
@@ -53,7 +67,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
