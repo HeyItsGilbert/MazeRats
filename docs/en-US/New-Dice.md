@@ -5,64 +5,36 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-Spell
+# New-Dice
 
 ## SYNOPSIS
-Uses a player spell if they know it.
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-Invoke-Spell [[-Player] <MazeRat>] [[-Spell] <Magic>] [<CommonParameters>]
+New-Dice [[-Sides] <Int16>] [[-List] <Int32[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This allows you to use a MazeRat players Spells. It will return text saying that
-they used their spell.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 ```powershell
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman casts Shielding Blast!
+PS C:\> {{ Add example code here }}
 ```
 
-$p is Hester Bettleman and he used his Shielding Blast spell
-
-### EXAMPLE 2
-```
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman doesn't know that spell...
-They do know:
-```
-
-Hester Bettleman ($p) tried using Shielding Blast spell but didn't know it.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Player
-This should be a player object created by New-MazeRat
+### -List
+{{ Fill List Description }}
 
 ```yaml
-Type: MazeRat
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Spell
-This should be a spell that is listed in the Players spell array.
-
-You can check by checking $player.Spells
-
-```yaml
-Type: Magic
+Type: Int32[]
 Parameter Sets: (All)
 Aliases:
 
@@ -73,16 +45,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Sides
+{{ Fill Sides Description }}
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
-### Inputs (if any)
+### None
 ## OUTPUTS
 
-### Output (if any)
+### System.Object
 ## NOTES
-General notes
 
 ## RELATED LINKS

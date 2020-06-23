@@ -5,47 +5,50 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-Spell
+# New-Spell
 
 ## SYNOPSIS
-Uses a player spell if they know it.
+Create a new spell for your PC or NPC to use/discover.
 
 ## SYNTAX
 
 ```
-Invoke-Spell [[-Player] <MazeRat>] [[-Spell] <Magic>] [<CommonParameters>]
+New-Spell [[-Mutation] <Boolean>] [[-Omen] <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This allows you to use a MazeRat players Spells. It will return text saying that
-they used their spell.
+Creates a spell.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Create new spell
 ```powershell
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman casts Shielding Blast!
+PS C:\> $spell = New-Spell
+PS C:\> $spell
+
+PhysicalEffect  :
+PhysicalElement :
+PhysicalForm    : Trap
+EtherealEffect  :
+EtherealElement : Warp
+EtherealForm    :
+Mutation        :
+Insanity        :
+Omen            :
+
+PS C:\> $spell.ToString()
+Warp Trap
 ```
 
-$p is Hester Bettleman and he used his Shielding Blast spell
-
-### EXAMPLE 2
-```
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman doesn't know that spell...
-They do know:
-```
-
-Hester Bettleman ($p) tried using Shielding Blast spell but didn't know it.
+Create a new spell and save it to a variable.
 
 ## PARAMETERS
 
-### -Player
-This should be a player object created by New-MazeRat
+### -Mutation
+Should the spell has a mutation.
 
 ```yaml
-Type: MazeRat
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -56,13 +59,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Spell
-This should be a spell that is listed in the Players spell array.
-
-You can check by checking $player.Spells
+### -Omen
+Should the spell result in an Omen.
 
 ```yaml
-Type: Magic
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -78,11 +79,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Inputs (if any)
+### None
 ## OUTPUTS
 
-### Output (if any)
+### System.Object
 ## NOTES
-General notes
 
 ## RELATED LINKS

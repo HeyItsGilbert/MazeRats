@@ -5,44 +5,37 @@ online version:
 schema: 2.0.0
 ---
 
-# Invoke-Spell
+# Add-XP
 
 ## SYNOPSIS
-Uses a player spell if they know it.
+Add experience points to a player.
 
 ## SYNTAX
 
 ```
-Invoke-Spell [[-Player] <MazeRat>] [[-Spell] <Magic>] [<CommonParameters>]
+Add-XP [[-Player] <MazeRat>] [[-XP] <Int16>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This allows you to use a MazeRat players Spells. It will return text saying that
-they used their spell.
+Given a player and XP gained, it will add it to the existing points and if
+approriate level the player up.
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 ```powershell
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman casts Shielding Blast!
+PS C:\> Add-XP -Player $joe -XP 10
+Choose an ability to bump!
+Leveled up! Level 4
+Total XP: 18
 ```
 
-$p is Hester Bettleman and he used his Shielding Blast spell
-
-### EXAMPLE 2
-```
-> Invoke-Spell $p -Spell 'Shielding Blast'
-Hester Bettleman doesn't know that spell...
-They do know:
-```
-
-Hester Bettleman ($p) tried using Shielding Blast spell but didn't know it.
+Give PC `$Joe` 10 additional XP.
 
 ## PARAMETERS
 
 ### -Player
-This should be a player object created by New-MazeRat
+This is a MazeRat player you created with New-MazeRat
 
 ```yaml
 Type: MazeRat
@@ -56,13 +49,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Spell
-This should be a spell that is listed in the Players spell array.
-
-You can check by checking $player.Spells
+### -XP
+Experience points gained.
 
 ```yaml
-Type: Magic
+Type: Int16
 Parameter Sets: (All)
 Aliases:
 
@@ -78,11 +69,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Inputs (if any)
+### None
 ## OUTPUTS
 
-### Output (if any)
+### System.Object
 ## NOTES
-General notes
 
 ## RELATED LINKS

@@ -35,7 +35,7 @@ Returns a MazeMonster
 ## PARAMETERS
 
 ### -Ability
-{{ Fill Ability Description }}
+Optional ability for your monster.
 
 ```yaml
 Type: String
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Feature
-{{ Fill Feature Description }}
+What kind of feature does the monster have?
 
 ```yaml
 Type: String
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonsterBase
-{{ Fill MonsterBase Description }}
+Is this monster Aerial, Terrestrial, or Aquatic?
 
 ```yaml
 Type: MonsterBase
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Strength
-{{ Fill Strength Description }}
+Weak, Average, Strong, Powerful, Monstrous
 
 ```yaml
 Type: StrBonus
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -Trait
-{{ Fill Trait Description }}
+What kind of trait does this monster have?
 
 ```yaml
 Type: String
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -Will
-{{ Fill Will Description }}
+Dimwitted, Average, Clever, Brilliant, Genius
 
 ```yaml
 Type: WilBonus
