@@ -4,6 +4,7 @@ Properties {
     $PSBPreference.Help.DefaultLocale = 'en-US'
     $PSBPreference.Test.OutputFile = 'out/testResults.xml'
     $PSBPreference.Test.OutputFormat = 'JUnitXml'
+    $PSBPreference.Test.ScriptAnalysis.SettingsPath = 'Tests/ScriptAnalyzerSettings.psd1'
 }
 
 Task Default -depends Test

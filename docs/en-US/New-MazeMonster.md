@@ -8,7 +8,6 @@ schema: 2.0.0
 # New-MazeMonster
 
 ## SYNOPSIS
-
 Creates a new monster for your encounters.
 
 ## SYNTAX
@@ -25,25 +24,24 @@ Randomly generates a monsters.
 ## EXAMPLES
 
 ### EXAMPLE 1
-
 ```
 New-MazeMonster
-```
-
 Returns a MazeMonster
+```
 
 ## PARAMETERS
 
-### -Ability
-Optional ability for your monster.
+### -Health
+The type of health we want from this Monster.
 
 ```yaml
-Type: String
+Type: Health
 Parameter Sets: (All)
 Aliases:
+Accepted values: Weak, Typical, Tough, Hulking, Colossal
 
-Required: False
-Position: 9
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -59,7 +57,7 @@ Aliases:
 Accepted values: Unarmored, LightProtection, ModerateProtection, HeavyProtection, NighImpervious
 
 Required: True
-Position: 1
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -75,7 +73,23 @@ Aliases:
 Accepted values: Untrained, Trained, Dangerous, Masterful, Lethal
 
 Required: True
-Position: 2
+Position: 3
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Strength
+Weak, Average, Strong, Powerful, Monstrous
+
+```yaml
+Type: StrBonus
+Parameter Sets: (All)
+Aliases:
+Accepted values: Weak, Average, Strong, Powerful, Monstrous
+
+Required: True
+Position: 4
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -91,85 +105,7 @@ Aliases:
 Accepted values: Slow, Average, Nimble, Swift, Blurred
 
 Required: True
-Position: 4
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Feature
-What kind of feature does the monster have?
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 7
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Health
-The type of health we want from this Monster.
-
-```yaml
-Type: Health
-Parameter Sets: (All)
-Aliases:
-Accepted values: Weak, Typical, Tough, Hulking, Colossal
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MonsterBase
-Is this monster Aerial, Terrestrial, or Aquatic?
-
-```yaml
-Type: MonsterBase
-Parameter Sets: (All)
-Aliases:
-Accepted values: Aerial, Terrestrial, Aquatic
-
-Required: False
-Position: 6
-Default value: ([Enum]::GetValues([MonsterBase]) | Get-Random)
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Strength
-Weak, Average, Strong, Powerful, Monstrous
-
-```yaml
-Type: StrBonus
-Parameter Sets: (All)
-Aliases:
-Accepted values: Weak, Average, Strong, Powerful, Monstrous
-
-Required: True
-Position: 3
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Trait
-What kind of trait does this monster have?
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: 8
+Position: 5
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -185,7 +121,68 @@ Aliases:
 Accepted values: Dimwitted, Average, Clever, Brilliant, Genius
 
 Required: True
-Position: 5
+Position: 6
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MonsterBase
+Is this monster Aerial, Terrestrial, or Aquatic?
+
+```yaml
+Type: MonsterBase
+Parameter Sets: (All)
+Aliases:
+Accepted values: Aerial, Terrestrial, Aquatic
+
+Required: False
+Position: 7
+Default value: ([Enum]::GetValues([MonsterBase]) | Get-Random)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Feature
+What kind of feature does the monster have?
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 8
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Trait
+What kind of trait does this monster have?
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 9
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Ability
+Optional ability for your monster.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 10
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

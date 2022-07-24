@@ -23,5 +23,7 @@
     'PSScriptAnalyzer' = @{
         Version = '1.19.1'
     }
+    'RPGDice' = @{
+        Version = 'latest'
+    }
 }
- 

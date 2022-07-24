@@ -22,30 +22,14 @@ Creates a new name based on the original table in MazeRats.
 ## EXAMPLES
 
 ### EXAMPLE 1
-```powershell
-PS C:\> New-RatName
+```
+New-RatName
 Trillby Crumpling
 ```
 
 Creates a random name to be used by PC or NPC.
 
 ## PARAMETERS
-
-### -Class
-Social Rank
-
-```yaml
-Type: SocialClass
-Parameter Sets: (All)
-Aliases:
-Accepted values: UpperClass, LowerClass
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Gender
 Gender
@@ -57,7 +41,23 @@ Aliases:
 Accepted values: Male, Female
 
 Required: False
-Position: 0
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Class
+Social Rank
+
+```yaml
+Type: SocialClass
+Parameter Sets: (All)
+Aliases:
+Accepted values: UpperClass, LowerClass
+
+Required: False
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -68,11 +68,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Inputs (if any)
 ## OUTPUTS
 
-### Output's a name.
 ## NOTES
-General notes
 
 ## RELATED LINKS
+
+[Specify a URI to a help page, this will show when Get-Help -Online is used.]()
+
