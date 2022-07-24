@@ -1,4 +1,5 @@
 # MazeRats
+![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MazeRats) ![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/MazeRats) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/HeyItsGilbert/MazeRats/CI) ![PowerShell Gallery](https://img.shields.io/powershellgallery/p/MazeRats)
 
 A MazeRats PC and NPC generator in powershell!
 
