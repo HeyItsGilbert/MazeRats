@@ -1,5 +1,9 @@
 # MazeRats
-![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MazeRats) ![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/MazeRats) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/HeyItsGilbert/MazeRats/CI) ![PowerShell Gallery](https://img.shields.io/powershellgallery/p/MazeRats)
+
+![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MazeRats)
+![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/MazeRats)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/HeyItsGilbert/MazeRats/CI)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/p/MazeRats)
 
 A MazeRats PC and NPC generator in powershell!
 
@@ -18,11 +22,19 @@ easy to play digitally, you'll still want to have a copy of the rules.
 Install-Module MazeRats
 ```
 
+Or you can fetch it from the [Powershell Gallery](https://www.powershellgallery.com/packages/MazeRats)
+
+## Documentation
+
+The docs are generated as part of the buid and are rendered into the Docs folder.
+These are available here :[Help docs](https://heyitsgilbert.github.io/MazeRats/)
+
 ## Developing
 
-1. Clone this directory
+1. Clone the repo
 1. Download the necessary modules via
    * `.\build.ps1 -Bootstrap`
+1. I recommend using VSCode and the built in tasks.
 
 ## Examples
 

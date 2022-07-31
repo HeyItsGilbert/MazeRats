@@ -12,7 +12,7 @@
   RootModule = 'MazeRats.psm1'
 
   # Version number of this module.
-  ModuleVersion = '0.1.1'
+  ModuleVersion = '0.1.2'
 
   # Supported PSEditions
   # CompatiblePSEditions = @()
@@ -117,7 +117,7 @@
       ProjectUri = 'https://github.com/HeyItsGilbert/MazeRats/'
 
       # A URL to an icon representing this module.
-      IconUri = 'https://raw.githubusercontent.com/HeyItsGilbert/RPGDice/main/static/tinymaze.png'
+      IconUri = 'https://raw.githubusercontent.com/HeyItsGilbert/MazeRats/main/static/tinymaze.png'
 
       # ReleaseNotes of this module
       ReleaseNotes = 'https://github.com/HeyItsGilbert/MazeRats/blob/master/CHANGELOG.md'

@@ -5,6 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.1.2] Icon Fix
+
+- Fix the icon in the PSD1
+- Improve the README
+
 ## [0.1.1] Minor tweaks
 
 - Move help text to comment blocks for easier dev experience.
