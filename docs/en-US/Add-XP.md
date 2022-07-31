@@ -22,15 +22,15 @@ approriate level the player up.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> Add-XP -Player $joe -XP 10
+### EXAMPLE 1
+```
+Add-XP -Player $joe -XP 10
 Choose an ability to bump!
 Leveled up! Level 4
 Total XP: 18
 ```
 
-Give PC `$Joe` 10 additional XP.
+Give PC \`$Joe\` 10 additional XP.
 
 ## PARAMETERS
 
@@ -43,7 +43,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -58,8 +58,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
-Default value: None
+Position: 2
+Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -69,10 +69,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS

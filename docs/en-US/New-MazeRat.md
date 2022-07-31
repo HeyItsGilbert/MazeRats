@@ -21,9 +21,9 @@ Generate a new character quickly with minimal options.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> New-MazeRat
+### EXAMPLE 1
+```
+New-MazeRat
 Name           : Hester Bettleman
 Level          : 1
 XP             : 0
@@ -48,17 +48,17 @@ Generating a Random character with no parameters.
 
 ## PARAMETERS
 
-### -Class
-The social class this character belongs to.
+### -Name
+Their name.
+You can generate one via \`New-RatName\` if you'd like.
 
 ```yaml
-Type: SocialClass
+Type: Object
 Parameter Sets: (All)
 Aliases:
-Accepted values: UpperClass, LowerClass
 
 Required: False
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -75,23 +75,24 @@ Aliases:
 Accepted values: Male, Female
 
 Required: False
-Position: 1
-Default value: None
+Position: 2
+Default value: ([Enum]::GetValues([Gender]) | Get-Random)
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Name
-Their name. You can generate one via `New-RatName` if you'd like.
+### -Class
+The social class this character belongs to.
 
 ```yaml
-Type: Object
+Type: SocialClass
 Parameter Sets: (All)
 Aliases:
+Accepted values: UpperClass, LowerClass
 
 Required: False
-Position: 0
-Default value: None
+Position: 3
+Default value: ([Enum]::GetValues([SocialClass]) | Get-Random)
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -101,11 +102,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
-
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Complete-AbilityBump
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Bump a players ability
 
 ## SYNTAX
 
@@ -17,27 +17,28 @@ Complete-AbilityBump [[-Player] <MazeRat>] [[-Ability] <Abilities>] [<CommonPara
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+If a player has gained enough skill in an ability, you can bump their total.
 
 ## EXAMPLES
 
-### Example 1
-```powershell
-PS C:\> {{ Add example code here }}
+### EXAMPLE 1
+```
+Complete-AbilityBump -Player $P  -Ability Strength
 ```
 
-{{ Add example description here }}
+Increasing player ($p) strength ability.
+If the player has more ability points
+you will be prompted.
 
 ## PARAMETERS
 
-### -Ability
-{{ Fill Ability Description }}
+### -Player
+This should be a player object created by New-MazeRat
 
 ```yaml
-Type: Abilities
+Type: MazeRat
 Parameter Sets: (All)
 Aliases:
-Accepted values: Strength, Dexterity, Will
 
 Required: False
 Position: 1
@@ -46,16 +47,17 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Player
-{{ Fill Player Description }}
+### -Ability
+An ability to bump (Dexterity, Strength, or Will)
 
 ```yaml
-Type: MazeRat
+Type: Abilities
 Parameter Sets: (All)
 Aliases:
+Accepted values: Strength, Dexterity, Will
 
 Required: False
-Position: 0
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -66,10 +68,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS

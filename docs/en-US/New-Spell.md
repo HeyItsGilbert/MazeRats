@@ -21,10 +21,11 @@ Creates a spell.
 
 ## EXAMPLES
 
-### Create new spell
-```powershell
-PS C:\> $spell = New-Spell
+### EXAMPLE 1
+```
+$spell = New-Spell
 PS C:\> $spell
+```
 
 PhysicalEffect  :
 PhysicalElement :
@@ -36,9 +37,8 @@ Mutation        :
 Insanity        :
 Omen            :
 
-PS C:\> $spell.ToString()
+PS C:\\\> $spell.ToString()
 Warp Trap
-```
 
 Create a new spell and save it to a variable.
 
@@ -53,8 +53,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
-Default value: None
+Position: 1
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -68,8 +68,8 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 1
-Default value: None
+Position: 2
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -79,10 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
 ## OUTPUTS
 
-### System.Object
 ## NOTES
 
 ## RELATED LINKS
