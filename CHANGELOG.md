@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Remove dice rolls and depend on RPGDice for that.
 - Switch to 2 space as the indent
 - Add exclude for 'PSUseShouldProcessForStateChangingFunctions'
+- Skipping 'Has correct parameter type' since we rely on a lot of enums
 
 ## [0.1.0] Unreleased
 

@@ -5,6 +5,7 @@
   Randomly generates a monsters.
 .EXAMPLE
   New-MazeMonster
+
   Returns a MazeMonster
 .PARAMETER Ability
   Optional ability for your monster.
