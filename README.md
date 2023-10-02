@@ -1,6 +1,6 @@
 # MazeRats
 
-A MazeRats PC and NPC generator in powershell!
+A MazeRats PC and NPC generator in PowerShell!
 
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/dt/MazeRats)
 ![PowerShell Gallery Version](https://img.shields.io/powershellgallery/v/MazeRats)
