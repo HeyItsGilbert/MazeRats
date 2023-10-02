@@ -1,5 +1,13 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+permissions:
+  checks: write
+  pull-requests: write
 jobs:
   test:
     name: Run Tests
@@ -10,11 +18,18 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
     steps:
     - uses: actions/checkout@v2
+    - name: GetDependancies
+      id: getdepends
+      shell: pwsh
+      run: |
+        $d = (Import-PowerShellDataFile .\requirements.psd1).GetEnumerator() | Where-Object { $_.Name -ne 'PSDependOptions'}
+        $output = ($d | ForEach-Object { "{0}:{1}" -F $_.Name, $_.Value.Version}) -join ', '
+        Add-Content -Path $env:GITHUB_OUTPUT -Value "modules-to-cache=$output"
     - name: Install and cache PowerShell modules
       id: psmodulecache
       uses: potatoqualitee/psmodulecache@v4.5
       with:
-        modules-to-cache: Pester:5.3.3, psake:4.9.0, BuildHelpers:2.0.16, PowerShellBuild:0.6.1, PSScriptAnalyzer:1.19.1
+        modules-to-cache: ${{ steps.getdepends.outputs.modules-to-cache}}
         shell: pwsh
     - name: Test
       shell: pwsh
