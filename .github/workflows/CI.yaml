@@ -23,7 +23,7 @@ jobs:
       shell: pwsh
       run: |
         $d = (Import-PowerShellDataFile .\requirements.psd1).GetEnumerator() | Where-Object { $_.Name -ne 'PSDependOptions'}
-        $output = ($d | ForEach-Object { "{0}:{1}" -F $_.Name, $_.Value.Version}) -join ' '
+        $output = ($d | ForEach-Object { "{0}:{1}" -F $_.Name, $_.Value.Version}) -join ', '
         Add-Content -Path $env:GITHUB_OUTPUT -Value "modules-to-cache=$output"
     - name: Install and cache PowerShell modules
       id: psmodulecache
