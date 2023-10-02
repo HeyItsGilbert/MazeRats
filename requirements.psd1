@@ -24,6 +24,6 @@
         Version = '1.19.1'
     }
     'RPGDice' = @{
-        Version = 'latest'
+        Version = '0.1.5'
     }
 }
