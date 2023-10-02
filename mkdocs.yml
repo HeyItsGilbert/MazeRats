@@ -2,4 +2,11 @@ site_name: "Maze Rats PowerShell Module"
 site_url: https://heyitsgilbert.github.io/MazeRats/
 repo_url: https://github.com/HeyItsGilbert/MazeRats
 theme: readthedocs
-
+nav:
+  - Home: 'index.md'
+  - Changelog: 'https://github.com/HeyItsGilbert/MazeRats/blob/main/CHANGELOG.md'
+  - en-US:
+      - en-US/
+plugins:
+  - search
+  - include_dir_to_nav
