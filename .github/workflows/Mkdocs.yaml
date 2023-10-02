@@ -35,3 +35,4 @@ jobs:
         if: steps.check_file_changed.outputs.docs_changed == 'True'
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          REQUIREMENTS: docs/requirements.txt
