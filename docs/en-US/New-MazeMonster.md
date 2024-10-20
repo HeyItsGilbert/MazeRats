@@ -15,7 +15,7 @@ Creates a new monster for your encounters.
 ```
 New-MazeMonster [-Health] <Health> [-Armor] <Armor> [-AttackBonus] <AttackBonus> [-Strength] <StrBonus>
  [-Dexterity] <DexBonus> [-Will] <WilBonus> [[-MonsterBase] <MonsterBase>] [[-Feature] <String>]
- [[-Trait] <String>] [[-Ability] <String>] [<CommonParameters>]
+ [[-Trait] <String>] [[-Ability] <String>] [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -183,6 +183,21 @@ Aliases:
 
 Required: False
 Position: 10
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
