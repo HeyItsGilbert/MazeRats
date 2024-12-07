@@ -70,6 +70,8 @@ class MazeMonster {
     [String]$Weakness
 
     # Constructor
+    MazeMonster() {}
+    MazeMonster([String]$Json) { $this.FromJson($Json) }
     MazeMonster(
         [Health]$Health,
         [Armor]$Armor,
@@ -462,4 +464,23 @@ class MazeMonster {
             'Wormwood'
         ) | Get-Random
     }
+
+    #region Helpers
+    [String] AsJson() {
+        $json = @{}
+        $properties = $this | Get-Member -MemberType Property
+        foreach ($property in $properties.Name) {
+            $json[$property] = $this.$($property)
+        }
+        return $($json | ConvertTo-Json)
+    }
+    [MazeMonster] FromJson([string]$JsonString) {
+        $json = $JsonString | ConvertFrom-Json
+        foreach ($property in @($json.PSObject.Properties.Name)) {
+            Write-Verbose "Setting property: $property"
+            $this.$($property) = $json.$property
+        }
+        return $this
+    }
+    #endregion Helpers
 }

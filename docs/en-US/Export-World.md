@@ -5,60 +5,57 @@ online version:
 schema: 2.0.0
 ---
 
-# Complete-AbilityBump
+# Export-World
 
 ## SYNOPSIS
-Bump a players ability
+{{ Fill in the Synopsis }}
 
 ## SYNTAX
 
 ```
-Complete-AbilityBump [[-Player] <MazeRat>] [[-Ability] <Abilities>] [-ProgressAction <ActionPreference>]
- [<CommonParameters>]
+Export-World [-ProgressAction <ActionPreference>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-If a player has gained enough skill in an ability, you can bump their total.
+{{ Fill in the Description }}
 
 ## EXAMPLES
 
-### EXAMPLE 1
-```
-Complete-AbilityBump -Player $P  -Ability Strength
+### Example 1
+```powershell
+PS C:\> {{ Add example code here }}
 ```
 
-Increasing player ($p) strength ability.
-If the player has more ability points
-you will be prompted.
+{{ Add example description here }}
 
 ## PARAMETERS
 
-### -Player
-This should be a player object created by New-MazeRat
+### -Confirm
+Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: MazeRat
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
+Aliases: cf
 
 Required: False
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Ability
-An ability to bump (Dexterity, Strength, or Will)
+### -WhatIf
+Shows what would happen if the cmdlet runs.
+The cmdlet is not run.
 
 ```yaml
-Type: Abilities
+Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Accepted values: Strength, Dexterity, Will
+Aliases: wi
 
 Required: False
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -84,8 +81,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
 
+### System.Object
 ## NOTES
 
 ## RELATED LINKS

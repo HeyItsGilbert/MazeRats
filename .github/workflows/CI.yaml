@@ -27,7 +27,7 @@ jobs:
         Add-Content -Path $env:GITHUB_OUTPUT -Value "modules-to-cache=$output"
     - name: Install and cache PowerShell modules
       id: psmodulecache
-      uses: potatoqualitee/psmodulecache@v4.5
+      uses: potatoqualitee/psmodulecache@v6.2
       with:
         modules-to-cache: ${{ steps.getdepends.outputs.modules-to-cache}}
         shell: pwsh
@@ -36,7 +36,7 @@ jobs:
       run: ./build.ps1 -Task Test -Bootstrap
     - name: Upload Unit Test Results
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Unit Test Results (OS ${{ matrix.os }})
         path: ./tests/out/testResults.xml
@@ -49,11 +49,11 @@ jobs:
 
     steps:
       - name: Download Artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           path: artifacts
 
       - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
+        uses: EnricoMi/publish-unit-test-result-action@v2.18.0
         with:
           files: artifacts/**/*.xml

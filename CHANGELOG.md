@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.0] Add Configuration To Support Saving
+
+### Added
+
+- `Import-World` and `Export-World` which can read and save a configuration file
+
+### Changed
+
+- Updated New-MazeRat to save into the `$MazeRat`.
+
 ## [0.1.2] Icon Fix
 
 - Fix the icon in the PSD1

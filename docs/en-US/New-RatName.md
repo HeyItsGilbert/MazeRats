@@ -13,7 +13,7 @@ Create a new character name.
 ## SYNTAX
 
 ```
-New-RatName [[-Gender] <Gender>] [[-Class] <SocialClass>] [<CommonParameters>]
+New-RatName [[-Gender] <Gender>] [[-Class] <SocialClass>]
 ```
 
 ## DESCRIPTION
@@ -63,9 +63,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ## OUTPUTS
@@ -73,6 +70,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Specify a URI to a help page, this will show when Get-Help -Online is used.]()
-

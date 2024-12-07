@@ -12,7 +12,7 @@
   RootModule = 'MazeRats.psm1'
 
   # Version number of this module.
-  ModuleVersion = '0.1.2'
+  ModuleVersion = '0.2.0'
 
   # Supported PSEditions
   # CompatiblePSEditions = @()
@@ -51,13 +51,13 @@
   # ProcessorArchitecture = ''
 
   # Modules that must be imported into the global environment prior to importing this module
-  RequiredModules = @('RPGDice')
+  RequiredModules = @('RPGDice', 'Configuration')
 
   # Assemblies that must be loaded prior to importing this module
   # RequiredAssemblies = @()
 
   # Script files (.ps1) that are run in the caller's environment prior to importing this module.
-  # ScriptsToProcess = @()
+  ScriptsToProcess = @('Classes\Magic.ps1', 'Classes\MazeMonsters.ps1', 'Classes\MazeRats.ps1')
 
   # Type files (.ps1xml) to be loaded when importing this module
   # TypesToProcess = @()
@@ -75,7 +75,7 @@
   CmdletsToExport = ''
 
   # Variables to export from this module
-  VariablesToExport = ''
+  VariablesToExport = 'MazeRats'
 
   # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
   AliasesToExport = ''

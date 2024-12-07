@@ -49,6 +49,10 @@ class MazeRat {
   [System.Collections.ArrayList] $Spells = @()
 
   # Contructor
+  MazeRat () {}
+  MazeRat ([String]$Json) {
+    $this.FromJson($Json)
+  }
   MazeRat ([String]$Name, [Int16]$Level) {
     $this.Name = $Name
     $this.Level = $Level
@@ -385,4 +389,23 @@ class MazeRat {
     }
     return $Spell
   }
+
+  #region Helpers
+  [String] AsJson() {
+    $json = @{}
+    $properties = $this | Get-Member -MemberType Property
+    foreach ($property in $properties.Name) {
+      $json[$property] = $this.$($property)
+    }
+    return $($json | ConvertTo-Json)
+  }
+  [MazeRat] FromJson([string]$JsonString) {
+    $json = $JsonString | ConvertFrom-Json
+    foreach ($property in @($json.PSObject.Properties.Name)) {
+      Write-Verbose "Setting property: $property"
+      $this.$($property) = $json.$property
+    }
+    return $this
+  }
+  #endregion Helpers
 }

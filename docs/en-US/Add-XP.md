@@ -13,7 +13,7 @@ Add experience points to a player.
 ## SYNTAX
 
 ```
-Add-XP [[-Player] <MazeRat>] [[-XP] <Int16>] [<CommonParameters>]
+Add-XP [[-Player] <MazeRat>] [[-XP] <Int16>]
 ```
 
 ## DESCRIPTION
@@ -63,9 +63,6 @@ Default value: 0
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

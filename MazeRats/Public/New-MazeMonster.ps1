@@ -84,6 +84,7 @@ function New-MazeMonster {
     'Trait',
     'Ability'
   ) | ForEach-Object { '-{0} {1} ' -F $_, (Get-Variable -ValueOnly $_) }
+  [void]$MazeRats.Monsters.Add($base)
   Write-Verbose "New-MazeMonster $inputs"
 
   return $base

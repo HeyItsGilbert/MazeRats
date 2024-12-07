@@ -4,11 +4,8 @@ BeforeDiscovery {
 
     function global:FilterOutCommonParams {
         param ($Params)
-        $commonParams = @(
-            'Debug', 'ErrorAction', 'ErrorVariable', 'InformationAction', 'InformationVariable',
-            'OutBuffer', 'OutVariable', 'PipelineVariable', 'Verbose', 'WarningAction',
-            'WarningVariable', 'Confirm', 'Whatif'
-        )
+        $commonParams = [System.Management.Automation.PSCmdlet]::OptionalCommonParameters +
+        [System.Management.Automation.PSCmdlet]::CommonParameters
         $params | Where-Object { $_.Name -notin $commonParams } | Sort-Object -Property Name -Unique
     }
 
@@ -33,6 +30,25 @@ BeforeDiscovery {
 
     ## When testing help, remember that help is cached at the beginning of each session.
     ## To test, restart session.
+
+    # Find enums and skip them during certain checks
+    # Specify the path to your PowerShell file
+    $global:enums = [System.Collections.ArrayList]@()
+    foreach ($class in (Get-ChildItem -Path (Join-Path $outputModVerDir 'Classes'))) {
+        # Get the content of the file
+        $fileContent = Get-Content $class.FullName
+
+        # Use a regular expression to match enum definitions
+        $enumRegex = "enum\s+(\w+)\s*{"
+
+        # Find all matches
+        $enumMatches = [regex]::Matches($fileContent, $enumRegex)
+
+        # Process each match
+        foreach ($match in $enumMatches) {
+            [void]$global:enums.Add($match.Groups[1].Value)
+        }
+    }
 }
 
 AfterAll {
@@ -106,8 +122,10 @@ Describe 'Test help for <_.Name>' -ForEach $commands {
         }
 
         # Parameter type in help should match code
-        It 'Has correct parameter type' -Skip {
-            $parameterHelpType | Should -Be $parameter.ParameterType.Name
+        It 'Has correct parameter type' {
+            if ($parameter.ParameterType.Name -notin $global:enums) {
+                $parameterHelpType | Should -Be $parameter.ParameterType.Name
+            }
         }
     }
 

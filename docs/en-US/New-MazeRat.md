@@ -13,7 +13,8 @@ Creates a new character.
 ## SYNTAX
 
 ```
-New-MazeRat [[-Name] <Object>] [[-Gender] <Gender>] [[-Class] <SocialClass>] [<CommonParameters>]
+New-MazeRat [[-Name] <Object>] [[-Gender] <Gender>] [[-Class] <SocialClass>]
+ [-ProgressAction <ActionPreference>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -93,6 +94,21 @@ Accepted values: UpperClass, LowerClass
 Required: False
 Position: 3
 Default value: ([Enum]::GetValues([SocialClass]) | Get-Random)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProgressAction
+{{ Fill ProgressAction Description }}
+
+```yaml
+Type: ActionPreference
+Parameter Sets: (All)
+Aliases: proga
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
