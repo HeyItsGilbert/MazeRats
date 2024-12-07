@@ -3,7 +3,7 @@
         Target = 'CurrentUser'
     }
     'Pester' = @{
-        Version = '5.5.0'
+        Version = '5.6.1'
         Parameters = @{
             SkipPublisherCheck = $true
         }
@@ -25,5 +25,8 @@
     }
     'RPGDice' = @{
         Version = '0.1.5'
+    }
+    'Configuration' = @{
+        Version = '1.6.0'
     }
 }

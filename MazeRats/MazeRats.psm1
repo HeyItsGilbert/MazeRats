@@ -10,4 +10,9 @@ foreach ($import in @($class + $public + $private)) {
     }
 }
 
-Export-ModuleMember -Function $public.Basename
+$script:MazeRats = @{
+    Rats = [System.Collections.ArrayList]@()
+    Monsters = [System.Collections.ArrayList]@()
+}
+
+Export-ModuleMember -Function $public.Basename -Variable @('MazeRats')

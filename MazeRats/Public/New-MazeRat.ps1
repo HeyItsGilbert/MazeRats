@@ -66,5 +66,6 @@ function New-MazeRat {
   [void] $base.GetClothing()
   [void] $base.GetPersonality()
   [void] $base.GetMannerism()
+  [void]$MazeRats.Rats.Add($base)
   return $base
 }
