@@ -26,8 +26,9 @@ Randomly generates a monsters.
 ### EXAMPLE 1
 ```
 New-MazeMonster
-Returns a MazeMonster
 ```
+
+Returns a MazeMonster
 
 ## PARAMETERS
 
